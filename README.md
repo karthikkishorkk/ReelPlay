@@ -1,10 +1,10 @@
 # ReelPlay
 
-📖 Description
+# 📖 Description
 
 ReelPlay is a web application that allows users to browse and watch trailers of movies categorized as Now Playing, Popular, Top Rated, and Upcoming.
 
-✨ Features
+# ✨ Features
 
 🔍 Browse and search for movies by categories: Now Playing, Popular, Top Rated, and Upcoming
 
@@ -14,7 +14,7 @@ ReelPlay is a web application that allows users to browse and watch trailers of 
 
 📱 Responsive and user-friendly UI built with React
 
-🛠 Tech Stack
+# 🛠 Tech Stack
 
 Frontend: React (with React 19.0.0 and MUI v5)
 
@@ -24,11 +24,11 @@ API: The Movie Database (TMDb) API
 
 Hosting: Vercel
 
-🤝 Contributing
+# 🤝 Contributing
 
 Contributions are welcome! Feel free to fork the repo and submit pull requests.
 
-📜 License
+# 📜 License
 
 This project is licensed under the MIT License.
 
