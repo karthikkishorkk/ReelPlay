@@ -1,109 +1,162 @@
-.login{
-    height: 100vh;
-    background-image: linear-gradient(#0000007e,#0000007e),url("../../assets/background_banner.jpg");
-    padding: 20px 8%;
+/* RESET & BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.login-logo{
-    width: 150px;
+/* LOGIN LAYOUT */
+.login {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at top, #101010, #000000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.login-form{
-    width: 100%;
-    max-width: 450px;
-    background: rgba(0, 0,0,0.75);
-    border-radius: 4px;
-    padding: 60px;
-    margin: auto;
-}
-.login-form h1{
-    font-size: 32px;
-    font-weight: 500;
-    margin-bottom: 28px;
+.login-overlay {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 8px;
+  padding: 50px 40px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
 }
 
-.login-form input{
-    width: 100%;
-    height: 50px;
-    background: #333;
-    color: white;
-    margin: 12px 0;
-    border: 0;
-    outline: 0;
-    border-radius: 4px;
-    padding: 16px 20px;
-    font-size: 16px;
-    font-weight: 500;
+.login-logo {
+  display: block;
+  width: 160px;
+  margin: 0 auto 30px;
 }
 
-.login-form input::placeholder{
-    font-size: 16px;
-    font-weight: 500;
+/* FORM HEADINGS */
+.login-form h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
-.login-form button{
-    width: 100%;
-    border: 0;
-    outline: 0;
-    padding: 16px;
-    background: #e50914;
-    color: white;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 20px;
-    cursor: pointer;
+.login-form h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #dddddd;
+  text-align: center;
+  margin-bottom: 24px;
 }
 
-.form-help{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #b3b3b3;
-    font-size: 13px;
+/* FORM INPUTS */
+.login-form input {
+  width: 100%;
+  height: 48px;
+  background: #1e1e1e;
+  color: white;
+  margin: 10px 0;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 0 16px;
+  font-size: 16px;
 }
 
-.remember{
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.login-form input::placeholder {
+  color: #aaa;
 }
 
-.remember input{
-    width: 18px;
-    height: 18px;
+/* BUTTON */
+.login-form button {
+  width: 100%;
+  height: 48px;
+  background-color: #1db9c3; /* Teal-ish ReelPlay accent */
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.form-switch{
-    margin-top: 40px;
-    color: #737373;
+.login-form button:hover {
+  background-color: #17a2ad;
 }
 
-.form-switch span{
-    margin-left: 6px;
-    color: #fff;
-    font-weight: 500;
-    cursor: pointer;
+/* FORM HELP */
+.form-help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #999;
+  font-size: 13px;
+  margin-top: 15px;
 }
 
-.login-spinner{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.login-spinner img{
-    width: 60px;
+.remember input {
+  width: 16px;
+  height: 16px;
 }
 
+/* SWITCH LINK */
+.form-switch {
+  margin-top: 30px;
+  color: #bbb;
+  font-size: 14px;
+  text-align: center;
+}
+
+.form-switch span {
+  margin-left: 6px;
+  color: #1db9c3;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form-switch span:hover {
+  text-decoration: underline;
+}
+
+/* SPINNER */
+.login-spinner {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-spinner img {
+  width: 60px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 500px) {
-    .login{
-        padding: 15px 5%;
-    }    
-    .login-form{
-        padding: 20px;
-        margin-top: 30px;
-    }
+  .login-overlay {
+    padding: 30px 20px;
+    margin: 0 16px;
+  }
+
+  .login-logo {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+
+  .login-form h1 {
+    font-size: 24px;
+  }
+
+  .login-form h2 {
+    font-size: 18px;
+  }
 }
